@@ -3,211 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Cumple Brittany 🎉</title>
+<title>Cumple Brittany</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { background: #FBEAF0; font-family: Georgia, 'Times New Roman', serif; width: 100%; min-height: 100vh; -webkit-text-size-adjust: 100%; }
-  #invite-card { padding-bottom: env(safe-area-inset-bottom, 0); }
-  @keyframes shine {
-    0%, 100% { background-position: 200% 50%; }
-    50% { background-position: -100% 50%; }
-  }
-  @keyframes floatHeart {
-    0% { transform: translateY(0) scale(0.8) rotate(0deg); opacity: 0; }
-    15% { opacity: 0.8; }
-    85% { opacity: 0.6; }
-    100% { transform: translateY(-600px) scale(1.1) rotate(20deg); opacity: 0; }
-  }
-  #sinpe-card:active { transform: scale(0.98); }
+  html, body { background: #FBEAF0; font-family: Georgia, 'Times New Roman', serif; width: 100%; overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+  .card { position: relative; width: 100%; background: #FBEAF0; color: #4B1528; display: flex; flex-direction: column; gap: 12px; padding: 24px 16px 20px; }
+  .section { width: 100%; }
+  .box { background: #fff; border-radius: 12px; padding: 14px 16px; width: 100%; }
+  .sans { font-family: 'Helvetica Neue', Arial, sans-serif; }
+  .label { font-size: 10px; letter-spacing: 2px; color: #993556; font-weight: 500; text-transform: uppercase; }
+  .center { text-align: center; }
+  @keyframes shine { 0%,100%{background-position:200% 50%} 50%{background-position:-100% 50%} }
+  @keyframes floatHeart { 0%{transform:translateY(0) scale(.8) rotate(0);opacity:0} 15%{opacity:.8} 85%{opacity:.6} 100%{transform:translateY(-600px) scale(1.1) rotate(20deg);opacity:0} }
 </style>
 </head>
 <body>
 
-<div id="invite-card" style="width: 100%; position: relative; background: #FBEAF0; overflow: hidden; color: #4B1528;">
-
-  <div id="hearts-layer" style="position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1;"></div>
+<div class="card" id="invite-card">
+  <div id="hearts-layer" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1"></div>
 
   <!-- Header -->
-  <div style="position: relative; z-index: 2; padding: 28px 20px 16px; text-align: center;">
-    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #993556; margin-bottom: 16px; font-weight: 500;">Estás invitado</div>
-
-    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 6px;">
-      <div style="flex: 1; height: 0.5px; background: #D4537E; opacity: 0.4;"></div>
-      <div style="font-style: italic; font-size: 13px; color: #993556;">Celebramos a</div>
-      <div style="flex: 1; height: 0.5px; background: #D4537E; opacity: 0.4;"></div>
+  <div class="section center" style="position:relative;z-index:2">
+    <div class="sans label" style="margin-bottom:12px;letter-spacing:4px">Estás invitado</div>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+      <div style="flex:1;height:.5px;background:#D4537E;opacity:.4"></div>
+      <div style="font-style:italic;font-size:13px;color:#993556">Celebramos a</div>
+      <div style="flex:1;height:.5px;background:#D4537E;opacity:.4"></div>
     </div>
-
-    <h1 id="name-shine" style="font-size: 36px; font-weight: 400; margin: 8px 0 4px; line-height: 1.15; color: #4B1528; background: linear-gradient(90deg, #4B1528, #D4537E, #4B1528); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: shine 4s ease-in-out infinite;">Brittany Alvarado<br>Palma</h1>
-
-    <div style="display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; padding: 5px 16px; background: #F4C0D1; border-radius: 100px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 500; color: #72243E; letter-spacing: 2px;">
-      <span>21 AÑOS</span>
-    </div>
-
-    <p style="font-style: italic; font-size: 14px; color: #993556; margin: 14px 10px 0; line-height: 1.4;">"Para celebrar la vida de una excelente persona"</p>
+    <h1 style="font-size:clamp(28px,8vw,40px);font-weight:400;margin:6px 0;line-height:1.15;background:linear-gradient(90deg,#4B1528,#D4537E,#4B1528);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 4s ease-in-out infinite">Brittany Alvarado<br>Palma</h1>
+    <div class="sans" style="display:inline-flex;margin-top:8px;padding:4px 14px;background:#F4C0D1;border-radius:100px;font-size:12px;font-weight:500;color:#72243E;letter-spacing:2px">21 AÑOS</div>
+    <p style="font-style:italic;font-size:14px;color:#993556;margin-top:10px;line-height:1.4">"Para celebrar la vida de una excelente persona"</p>
   </div>
 
   <!-- Separador -->
-  <div style="position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; padding: 4px 0 8px;">
-    <div style="width: 40px; height: 0.5px; background: #D4537E;"></div>
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="#D4537E" style="margin: 0 10px;"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
-    <div style="width: 40px; height: 0.5px; background: #D4537E;"></div>
+  <div class="center" style="position:relative;z-index:2;display:flex;justify-content:center;align-items:center">
+    <div style="width:36px;height:.5px;background:#D4537E"></div>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4537E" style="margin:0 8px"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+    <div style="width:36px;height:.5px;background:#D4537E"></div>
   </div>
 
   <!-- Fecha + Hora -->
-  <div style="position: relative; z-index: 2; margin: 0 12px 12px; background: #fff; border-radius: 14px; padding: 16px;">
-    <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-      <div style="text-align: center;">
-        <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; letter-spacing: 2px; color: #993556; font-weight: 500;">DOMINGO</div>
-        <div style="font-size: 32px; font-weight: 400; color: #4B1528; line-height: 1;">26</div>
-        <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #993556;">Abril 2026</div>
+  <div class="box" style="position:relative;z-index:2">
+    <div style="display:flex;align-items:center;justify-content:center;gap:20px">
+      <div class="center">
+        <div class="sans label">DOMINGO</div>
+        <div style="font-size:30px;color:#4B1528;line-height:1">26</div>
+        <div class="sans" style="font-size:11px;color:#993556">Abril 2026</div>
       </div>
-      <div style="width: 0.5px; height: 48px; background: #D4537E; opacity: 0.3;"></div>
-      <div style="text-align: center;">
-        <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; letter-spacing: 2px; color: #993556; font-weight: 500;">HORA</div>
-        <div style="font-size: 32px; font-weight: 400; color: #4B1528; line-height: 1;">4:00</div>
-        <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #993556;">PM</div>
+      <div style="width:.5px;height:44px;background:#D4537E;opacity:.3"></div>
+      <div class="center">
+        <div class="sans label">HORA</div>
+        <div style="font-size:30px;color:#4B1528;line-height:1">4:00</div>
+        <div class="sans" style="font-size:11px;color:#993556">PM</div>
       </div>
     </div>
   </div>
 
   <!-- Countdown -->
-  <div id="countdown" style="position: relative; z-index: 2; margin: 0 12px 12px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;">
-    <div style="background: #F4C0D1; border-radius: 10px; padding: 10px 4px; text-align: center;">
-      <div id="cd-days" style="font-size: 24px; font-weight: 400; color: #4B1528; line-height: 1;">—</div>
-      <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 8px; letter-spacing: 1.5px; color: #72243E; margin-top: 4px;">DÍAS</div>
+  <div id="countdown" style="position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:6px">
+    <div style="background:#F4C0D1;border-radius:10px;padding:10px 0;text-align:center">
+      <div id="cd-days" style="font-size:22px;color:#4B1528;line-height:1">—</div>
+      <div class="sans" style="font-size:8px;letter-spacing:1.5px;color:#72243E;margin-top:3px">DÍAS</div>
     </div>
-    <div style="background: #F4C0D1; border-radius: 10px; padding: 10px 4px; text-align: center;">
-      <div id="cd-hours" style="font-size: 24px; font-weight: 400; color: #4B1528; line-height: 1;">—</div>
-      <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 8px; letter-spacing: 1.5px; color: #72243E; margin-top: 4px;">HRS</div>
+    <div style="background:#F4C0D1;border-radius:10px;padding:10px 0;text-align:center">
+      <div id="cd-hours" style="font-size:22px;color:#4B1528;line-height:1">—</div>
+      <div class="sans" style="font-size:8px;letter-spacing:1.5px;color:#72243E;margin-top:3px">HRS</div>
     </div>
-    <div style="background: #F4C0D1; border-radius: 10px; padding: 10px 4px; text-align: center;">
-      <div id="cd-mins" style="font-size: 24px; font-weight: 400; color: #4B1528; line-height: 1;">—</div>
-      <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 8px; letter-spacing: 1.5px; color: #72243E; margin-top: 4px;">MIN</div>
+    <div style="background:#F4C0D1;border-radius:10px;padding:10px 0;text-align:center">
+      <div id="cd-mins" style="font-size:22px;color:#4B1528;line-height:1">—</div>
+      <div class="sans" style="font-size:8px;letter-spacing:1.5px;color:#72243E;margin-top:3px">MIN</div>
     </div>
-    <div style="background: #F4C0D1; border-radius: 10px; padding: 10px 4px; text-align: center;">
-      <div id="cd-secs" style="font-size: 24px; font-weight: 400; color: #4B1528; line-height: 1;">—</div>
-      <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 8px; letter-spacing: 1.5px; color: #72243E; margin-top: 4px;">SEG</div>
+    <div style="background:#F4C0D1;border-radius:10px;padding:10px 0;text-align:center">
+      <div id="cd-secs" style="font-size:22px;color:#4B1528;line-height:1">—</div>
+      <div class="sans" style="font-size:8px;letter-spacing:1.5px;color:#72243E;margin-top:3px">SEG</div>
     </div>
   </div>
 
   <!-- Actividades -->
-  <div style="position: relative; z-index: 2; margin: 0 12px 12px; text-align: center;">
-    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; letter-spacing: 3px; color: #993556; font-weight: 500; margin-bottom: 10px;">TE ESPERAMOS</div>
-    <div style="display: flex; justify-content: center; gap: 20px;">
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg>
-        <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; color: #4B1528;">Karaoke</span>
+  <div class="section center" style="position:relative;z-index:2">
+    <div class="sans label" style="letter-spacing:3px;margin-bottom:8px">TE ESPERAMOS</div>
+    <div style="display:flex;justify-content:center;gap:18px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:3px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="1.5"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg>
+        <span class="sans" style="font-size:10px;color:#4B1528">Karaoke</span>
       </div>
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; color: #4B1528;">Música</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:3px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <span class="sans" style="font-size:10px;color:#4B1528">Música</span>
       </div>
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-        <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; color: #4B1528;">Baile</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:3px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        <span class="sans" style="font-size:10px;color:#4B1528">Baile</span>
       </div>
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
-        <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; color: #4B1528;">Comida</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:3px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+        <span class="sans" style="font-size:10px;color:#4B1528">Comida</span>
       </div>
     </div>
   </div>
 
   <!-- Ubicación -->
-  <div style="position: relative; z-index: 2; margin: 0 12px 10px; background: #fff; border-radius: 14px; padding: 14px 16px;">
-    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; letter-spacing: 2px; color: #993556; font-weight: 500; margin-bottom: 4px;">DÓNDE</div>
-    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #4B1528; line-height: 1.4;">Tercer Parada — entrada frente al kínder anexo, 200 metros.</div>
-    <a href="https://maps.app.goo.gl/tkr9rmUAqH7sTdhc7?g_st=aw" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; padding: 8px 14px; background: #4B1528; color: #FBEAF0; border-radius: 100px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 500; text-decoration: none;">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FBEAF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+  <div class="box" style="position:relative;z-index:2">
+    <div class="sans label" style="margin-bottom:3px">DÓNDE</div>
+    <div class="sans" style="font-size:13px;color:#4B1528;line-height:1.4">Tercer Parada — entrada frente al kínder anexo, 200 metros.</div>
+    <a href="https://maps.app.goo.gl/tkr9rmUAqH7sTdhc7?g_st=aw" class="sans" style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:8px 14px;background:#4B1528;color:#FBEAF0;border-radius:100px;font-size:12px;font-weight:500;text-decoration:none">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FBEAF0" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       Ver en Google Maps
     </a>
   </div>
 
   <!-- SINPE -->
-  <div id="sinpe-card" style="position: relative; z-index: 2; margin: 0 12px 10px; background: #fff; border: 1px solid #F4C0D1; border-radius: 14px; padding: 14px 16px; cursor: pointer; transition: transform 0.15s ease;">
-    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; letter-spacing: 2px; color: #993556; font-weight: 500; margin-bottom: 4px;">COLABORACIÓN</div>
-    <div style="font-size: 24px; font-weight: 400; color: #4B1528; line-height: 1;">₡5.000 por persona</div>
-    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #72243E; line-height: 1.4; margin: 6px 0 10px;">Para que todo salga perfecto — cubre comida y bebida.</p>
-    <div style="display: flex; gap: 8px; align-items: center; background: #FBEAF0; border-radius: 10px; padding: 10px 12px;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-      <div style="flex: 1;">
-        <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 8px; letter-spacing: 1.5px; color: #993556; font-weight: 500;">SINPE MÓVIL — TOCAR PARA COPIAR</div>
-        <div id="sinpe-number" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; color: #4B1528; letter-spacing: 1px;">6370-7362</div>
+  <div id="sinpe-card" class="box" style="position:relative;z-index:2;border:1px solid #F4C0D1;cursor:pointer;-webkit-tap-highlight-color:transparent">
+    <div class="sans label" style="margin-bottom:3px">COLABORACIÓN</div>
+    <div style="font-size:22px;color:#4B1528;line-height:1">₡5.000 por persona</div>
+    <p class="sans" style="font-size:11px;color:#72243E;line-height:1.4;margin:5px 0 8px">Para que todo salga perfecto — cubre comida y bebida.</p>
+    <div style="display:flex;gap:8px;align-items:center;background:#FBEAF0;border-radius:10px;padding:10px 12px">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      <div style="flex:1">
+        <div class="sans" style="font-size:8px;letter-spacing:1.5px;color:#993556;font-weight:500">SINPE MÓVIL — TOCAR PARA COPIAR</div>
+        <div id="sinpe-number" class="sans" style="font-size:15px;font-weight:500;color:#4B1528;letter-spacing:1px">6370-7362</div>
       </div>
-      <div id="sinpe-feedback" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; color: #0F6E56; font-weight: 500; opacity: 0; transition: opacity 0.2s ease;">✓</div>
+      <div id="sinpe-feedback" class="sans" style="font-size:10px;color:#0F6E56;font-weight:500;opacity:0;transition:opacity .2s">✓</div>
     </div>
   </div>
 
   <!-- WhatsApp -->
-  <div style="position: relative; z-index: 2; margin: 0 12px 12px;">
-    <a href="https://wa.me/50663707362?text=Hola%21%20Confirmo%20mi%20asistencia%20al%20cumple%20de%20Brittany%20%F0%9F%8E%89" style="display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px; background: #4B1528; color: #FBEAF0; border-radius: 100px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 500; text-decoration: none;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBEAF0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-      Confirmar asistencia
-    </a>
-  </div>
+  <a href="https://wa.me/50663707362?text=Hola%21%20Confirmo%20mi%20asistencia%20al%20cumple%20de%20Brittany%20%F0%9F%8E%89" class="sans" style="position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;background:#4B1528;color:#FBEAF0;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBEAF0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Confirmar asistencia
+  </a>
 
   <!-- Footer -->
-  <div style="position: relative; z-index: 2; padding: 10px 16px 20px; text-align: center; border-top: 0.5px dashed rgba(212,83,126,0.3);">
-    <button id="music-btn" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: transparent; border: 0.5px solid #D4537E; border-radius: 100px; color: #993556; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; cursor: pointer; letter-spacing: 1px;">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#993556" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+  <div class="center" style="position:relative;z-index:2;padding-top:8px;border-top:.5px dashed rgba(212,83,126,.3)">
+    <button id="music-btn" class="sans" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:transparent;border:.5px solid #D4537E;border-radius:100px;color:#993556;font-size:11px;cursor:pointer;letter-spacing:1px">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#993556" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
       <span id="music-label">ACTIVAR MÚSICA</span>
     </button>
-    <div style="font-style: italic; font-size: 12px; color: #993556; margin-top: 12px; letter-spacing: 1px;">con cariño ♥</div>
+    <div style="font-style:italic;font-size:12px;color:#993556;margin-top:10px;letter-spacing:1px">con cariño ♥</div>
   </div>
 </div>
 
 <script>
-(function() {
-  var heartLayer = document.getElementById('hearts-layer');
-  function spawnHeart() {
-    if (!heartLayer) return;
-    var h = document.createElement('div');
-    var size = 10 + Math.random() * 12;
-    var left = Math.random() * 100;
-    var duration = 6 + Math.random() * 4;
-    var delay = Math.random() * 2;
-    h.innerHTML = '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="#ED93B1"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>';
-    h.style.cssText = 'position:absolute;bottom:-20px;left:' + left + '%;opacity:0;animation:floatHeart ' + duration + 's linear ' + delay + 's forwards;';
-    heartLayer.appendChild(h);
-    setTimeout(function() { h.remove(); }, (duration + delay) * 1000);
-  }
-  for (var i = 0; i < 6; i++) spawnHeart();
-  setInterval(spawnHeart, 1200);
-
-  var target = new Date('2026-04-26T16:00:00-06:00').getTime();
-  function tick() {
-    var now = new Date().getTime();
-    var diff = target - now;
-    if (diff < 0) { ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(function(id){ var el = document.getElementById(id); if (el) el.textContent = '0'; }); return; }
-    var d = document.getElementById('cd-days'), h = document.getElementById('cd-hours'), m = document.getElementById('cd-mins'), s = document.getElementById('cd-secs');
-    if (d) d.textContent = Math.floor(diff / 86400000);
-    if (h) h.textContent = Math.floor((diff % 86400000) / 3600000);
-    if (m) m.textContent = Math.floor((diff % 3600000) / 60000);
-    if (s) s.textContent = Math.floor((diff % 60000) / 1000);
-  }
-  tick(); setInterval(tick, 1000);
-
-  var sinpeCard = document.getElementById('sinpe-card');
-  var sinpeFeedback = document.getElementById('sinpe-feedback');
-  if (sinpeCard) {
-    sinpeCard.addEventListener('click', function() {
-      var num = '63707362';
-      function show() { if (sinpeFeedback) { sinpeFeedback.style.opacity = '1'; setTimeout(function() { sinpeFeedback.style.opacity = '0'; }, 1800); } }
-      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(num).then(show).catch(show); } else { var ta = document.createElement('textarea'); ta.value = num; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch(e) {} document.body.removeChild(ta); show(); }
-    });
-  }
-
-  var musicBtn = document.getElementById('music-btn');
-  var musicLabel = document.getElementById('music-label');
-  var audio = null, playing = false;
-  if (musicBtn) {
-    musicBtn.addEventListener('click', function() {
-      if (!audio) { audio = new Audio('https://cdn.jsdelivr.net/gh/anars/blank-audio@master/2-minutes-of-silence.mp3'); audio.loop = true; }
-      if (playing) { audio.pause(); if (musicLabel) musicLabel.textContent = 'ACTIVAR MÚSICA'; playing = false; }
-      else { audio.play().catch(function(){}); if (musicLabel) musicLabel.textContent = 'PAUSAR MÚSICA'; playing = true; }
-    });
-  }
-})();
+!function(){var a=document.getElementById("hearts-layer");function s(){if(!a)return;var h=document.createElement("div"),z=10+12*Math.random(),l=100*Math.random(),d=6+4*Math.random(),y=2*Math.random();h.innerHTML='<svg width="'+z+'" height="'+z+'" viewBox="0 0 24 24" fill="#ED93B1"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>';h.style.cssText="position:absolute;bottom:-20px;left:"+l+"%;opacity:0;animation:floatHeart "+d+"s linear "+y+"s forwards";a.appendChild(h);setTimeout(function(){h.remove()},(d+y)*1e3)}for(var i=0;i<6;i++)s();setInterval(s,1200);var t=new Date("2026-04-26T16:00:00-06:00").getTime();function k(){var n=Date.now(),f=t-n;if(f<0){["cd-days","cd-hours","cd-mins","cd-secs"].forEach(function(e){var o=document.getElementById(e);if(o)o.textContent="0"});return}var d=document.getElementById("cd-days"),h=document.getElementById("cd-hours"),m=document.getElementById("cd-mins"),c=document.getElementById("cd-secs");if(d)d.textContent=Math.floor(f/864e5);if(h)h.textContent=Math.floor(f%864e5/36e5);if(m)m.textContent=Math.floor(f%36e5/6e4);if(c)c.textContent=Math.floor(f%6e4/1e3)}k();setInterval(k,1e3);var sc=document.getElementById("sinpe-card"),sf=document.getElementById("sinpe-feedback");if(sc)sc.addEventListener("click",function(){var n="63707362";function w(){if(sf){sf.style.opacity="1";setTimeout(function(){sf.style.opacity="0"},1800)}}if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(n).then(w).catch(w);else{var ta=document.createElement("textarea");ta.value=n;document.body.appendChild(ta);ta.select();try{document.execCommand("copy")}catch(e){}document.body.removeChild(ta);w()}});var mb=document.getElementById("music-btn"),ml=document.getElementById("music-label"),au=null,p=false;if(mb)mb.addEventListener("click",function(){if(!au){au=new Audio("https://cdn.jsdelivr.net/gh/anars/blank-audio@master/2-minutes-of-silence.mp3");au.loop=true}if(p){au.pause();if(ml)ml.textContent="ACTIVAR MÚSICA";p=false}else{au.play().catch(function(){});if(ml)ml.textContent="PAUSAR MÚSICA";p=true}})}();
 </script>
 </body>
 </html>
